@@ -1,0 +1,6 @@
+*.ini
+ssh
+node_modules
+*.zip
+*.rar
+*.docx

@@ -1,0 +1,118 @@
+// React Quill Editor with Image Resize >>> https://codesandbox.io/s/ry8vy?file=/src/Editor.js
+
+
+import React, { useState, useMemo, useRef } from 'react'
+import ReactQuill from 'react-quill'
+import 'react-quill/dist/quill.snow.css'
+
+const toolbarOptions = [
+  [{ header: [1, 2, false] }],
+  ['bold', 'italic', 'underline'],
+  [{ list: 'ordered' }, { list: 'bullet' }],
+  ['image', 'code-block'],
+]
+
+const CreatePost = () => {
+  const [title, setTitle] = useState('')
+  const [summary, setSummary] = useState('')
+  const [content, setContent] = useState('')
+  const [file, setFile] = useState('')
+
+  const quillRef = useRef()
+
+  const imageHandler = () => {
+    // get editor
+    const editor = quillRef.current.getEditor()
+
+    const input = document.createElement('input')
+    input.setAttribute('type', 'file')
+    input.setAttribute('accept', 'image/*')
+    input.click()
+
+    input.onchange = async () => {
+      const file = input.files[0]
+      console.log(file)
+      try {
+        const link =
+          'https://images.pexels.com/photos/688660/pexels-photo-688660.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        editor.insertEmbed(editor.getSelection(), 'image', link)
+      } catch (err) {
+        console.log('upload err:', err)
+      }
+    }
+  }
+
+  const modules = useMemo(
+    () => ({
+      toolbar: {
+        container: toolbarOptions,
+        handlers: {
+          image: imageHandler,
+        },
+      },
+    }),
+    []
+  )
+
+  // (1)
+  const createNewPost = (e) => {
+    e.preventDefault()
+
+    // thường sẽ dùng JSON.stringify để gửi body đi, nhưng lần này có file >> sẽ dùng FormData()
+    const data = new FormData()
+    data.set('title', title)
+    data.set('summary', summary)
+    data.set('file', file) // với file thì bên dưới chô input ko cần value
+    data.set('content', content)
+
+    // console.log(file)
+    console.log(content)
+
+    // fetch('/post', {
+    //   method:'POST,
+    //   body:
+    // })
+  }
+
+  return (
+    <form onSubmit={createNewPost}>
+      <div className='form-row'>
+        <input
+          title='title'
+          placeholder='Title'
+          className='form-input'
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </div>
+      <div className='form-row'>
+        <input
+          title='summary'
+          placeholder='Summary'
+          className='form-input'
+          value={summary}
+          onChange={(e) => setSummary(e.target.value)}
+        />
+      </div>
+      <div className='form-row'>
+        <input
+          type='file'
+          className='form-input'
+          onChange={(e) => setFile(e.target.files)}
+        />
+      </div>
+
+      <ReactQuill
+        ref={quillRef}
+        theme='snow'
+        modules={modules}
+        className='ql-editor'
+        value={content}
+        onChange={(newValue) => setContent(newValue)}
+      />
+      <button className='btn-block create-btn'>Create Post</button>
+    </form>
+  )
+}
+
+export default CreatePost

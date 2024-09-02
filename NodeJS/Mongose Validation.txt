@@ -1,0 +1,3 @@
+Mongoose validation: 
+
+- required, not require

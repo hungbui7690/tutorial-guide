@@ -1,0 +1,7 @@
+Alias: 
+	set "chinook=sqlite3 D:\Tools\sqlite3\chinook.db"
+
+Usage: 
+	%chinook%
+
+

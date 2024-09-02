@@ -1,0 +1,23 @@
+############# Create Bucket ############
+
+go to AWS Management Console 
+- services: S3
+
+- create new bucket
+	+ DNS Bucket Name: Domain name for this bucket
+	
+- set public 
+
+*** after create bucket, we will have ARN
+
+############
+- upload image
+- but still cannot access to image
+
+> click on bucket > permissions > bucket policy 
+	> Generate Policy 
+		+ Principle: who is using this bucket > * (everyone)
+	> Actions: Get Object 
+		+ Read the resources
+	> ARN : Enter the ARN we get in previous lesson
+		+ ..../* 

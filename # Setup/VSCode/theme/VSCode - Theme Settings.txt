@@ -1,0 +1,45 @@
+https://code.visualstudio.com/api/references/theme-color
+
+
+
+"workbench.colorTheme": "Default Dark+",
+  "workbench.colorCustomizations": {
+    "[*Dark*]": {
+      "sideBar.background": "#1D1E27",
+      "sideBarSectionHeader.background": "#23242F",
+      "activityBar.background": "#2E2F3F",
+      "activityBar.dropBorder": "#56689F",
+      "activityBar.inactiveForeground": "#576594",
+      "activityBar.foreground": "#fff",
+      "activityBar.activeBorder": "#fff",
+      "statusBar.background": "#17181D",
+      "editorGroupHeader.tabsBackground": "#17181D",
+      "tab.activeBorder": "#6B4461",
+      "tab.activeBackground": "#23242F",
+      "tab.inactiveBackground": "#2d303f",
+      "titleBar.activeBackground": "#1D1E27",
+      "editor.background": "#242430",
+      "badge.background": "#FE60C2",
+      "badge.foreground": "#FE60C2",
+      "activityBarBadge.background": "#FE60C2",
+      "activityBarBadge.foreground": "#fff",
+      "editorLineNumber.foreground": "#54669A",
+      "editorLineNumber.activeForeground": "#fff"
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    "variables": "#229977",
+    "strings": "#FF0000",
+    "functions": "#00D87E",
+    "keywords": "#FE60C2",
+    "types": "#F3FB82"
+  },
+  "editor.semanticTokenColorCustomizations": {
+    "[Rouge]": {
+      "enabled": true,
+      "rules": {
+        "*.declaration": { "bold": true }
+      }
+    }
+  }
+}

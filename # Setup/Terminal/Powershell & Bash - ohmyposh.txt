@@ -1,0 +1,8 @@
+Setup PowerShell
+https://ohmyposh.dev/docs/installation/windows
+
+
+
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Y

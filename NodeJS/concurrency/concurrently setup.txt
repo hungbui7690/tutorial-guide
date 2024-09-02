@@ -1,0 +1,16 @@
+- Thư mục client phải nằm trong thư mục server
+- "proxy": "http://localhost:5000/" trong package.json của client
+
+SERVER
+{
+  "scripts": {
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
+  }
+}
+

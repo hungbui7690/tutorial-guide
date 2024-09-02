@@ -1,0 +1,734 @@
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////
+// INSPIRATION
+
+
+
+https://kentcdodds.com/courses
+https://mui.com/material-ui/discover-more/showcase/
+https://ui.dev/react-query
+https://designcode.io/
+https://dunks1980.com/
+https://www.rammaheshwari.com/project-2
+https://brittanychiang.com/
+https://jacekjeznach.com/
+https://jesse-zhou.com/
+
+
+
+***** Portfolio *****
+> https://chenhuijing.com/contact/
+> https://github.com/huijing
+https://themesbrand.com/works.php
+https://www.cshelton.co.uk/personal-projects
+https://bobbyhadz.com/
+https://www.stefanjudis.com/blog
+https://icanhazdadjoke.com/api
+
+
+***** Navbar *****
+https://www.baeldung.com/git-modify-commit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////
+// DESIGN IDEAS
+
+https://dribbble.com/
+https://www.behance.net/
+https://www.pttrns.com/
+https://www.awwwards.com/
+https://onepagelove.com/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////
+// STUDY
+
+
+
+NodeJS
+SQL 
+WebPack
+Next
+Sanity
+DevOps
+Tailwind
+Framer Motion
+Worker
+
+
+
+
+
+***** Channels *****
+Javascript Mastery
+Traversy
+Lama
+
+
+
+***** Others *****
+CSS BEM > https://en.bem.info/methodology/naming-convention/
+https://asimzaidi.medium.com/advanced-data-fetching-technique-in-react-for-senior-engineers-9d9b6f95d50b
+https://beta.reactjs.org/learn/you-might-not-need-an-effect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////
+// CSS LIBRARY 
+
+BULMA
+PICO
+BOOTSRAP
+TAILWIND
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////
+// PYTHON
+
+
+***** Config *****
+python
+pylance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////
+// MOCK DATA
+
+https://jsonplaceholder.typicode.com/
+https://my-json-server.typicode.com/
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////
+// REACT
+
+"start": "react-scripts --openssl-legacy-provider start",
+
+
+react-reveal
+concurrently					
+react-quill (editor)			
+react-time-ago					
+date-fns						
+react-date-range				
+react-icons						
+values.js									Colos generator
+react-markdown					
+fakerjs
+
+intersection observer
+react-intersection-observer						
+react-icons										
+
+classnames
+
+
+***** FAKE API SERVER *****
+json-server
+	"server": "json-server -p 3001 --watch db.json",
+
+
+
+
+/////////////////////////////////////////////////////
+// NODESJ
+
+
+https://mswjs.io/				 mocking API
+nodemon		
+express							
+express-async-error				
+http-status-codes				
+bcryptjs						
+bcrypt (faster)					
+dotenv							
+jsonwebtoken					
+morgan							
+validator						
+joi	(validator)				
+joi-objectid
+express-fileupload				
+cloudinary					
+cookie-parser			
+underscore
+uuid							 generate unique names
+
+
+
+
+***** Config *****
+- rc
+- config
+
+
+
+
+
+***** STREAM *****
+multiparty : stream parsing
+multer (handling form-data) > upload files
+formidable > upload files
+
+
+
+
+
+***** TRANSACTION *****
+fawn: 2 phase commits (transactions) > deprecated
+
+
+
+
+
+***** LOG *****
+winston > log error 
+
+
+
+
+
+***** DOCS *****
+swagger-ui-express				npm i swagger-ui-express
+yamljs							npm i yamljs
+
+
+***** SECURITY *****
+helmet							npm i helmet
+cors							npm i cors
+xss-clean						npm i xss-clean
+express-rate-limit				npm i express-rate-limit
+express-mongo-sanitize
+
+***** JSON DATABASE *****
+fakebase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////
+////////////////////////// MAIL SERVER
+
+Mail Chimp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////
+// Tools
+
+
+
+Blobs
+https://www.shapedivider.app/
+https://haikei.app/
+
+
+https://vincentgarreau.com/particles.js/
+
+Image Breakpoints Generator
+> https://www.responsivebreakpoints.com/
+
+Optimize Images & Lazy Load
+> https://web.dev/fast/#optimize-your-images
+
+Emoji from Text
+> https://fsymbols.com/emoticons/maker/
+
+
+
+
+
+https://thednp.github.io/kute.js/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////
+// IMAGES
+https://pixabay.com/
+https://www.freepik.com/vectors/abstract-background
+
+
+Lorem: https://picsum.photos/
+
+
+https://undraw.co/illustrations
+https://www.pngwing.com/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////
+// FONTS
+
+- Open Sans
+- Inter
+- Poppins
+- Source Code Pro
+
+------------------
+- Space Mono
+- Roboto Mono
+- Fira Code
+- Fira Mono
+
+------------------
+- Itim
+- Kalam
+
+
+
+https://www.nerdfonts.com/font-downloads
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+font-family: 'Poppins', sans-serif;
+
+
+
+
+***** NHỚ GG: "GOOGLE FONT PAIRINGS"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////
+// ICONS
+
+https://heroicons.com/
+https://ionic.io/ionicons
+https://www.flaticon.com/
+https://www.iconfinder.com/
+*** Figma Community > Copy về xong Detach
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////
+// BACKGROUND COLOR
+
+
+https://colorhunt.co/
+https://color.adobe.com/explore
+
+Gradient > https://www.grabient.com/
+
+
+Dark Theme: #021221, #06181f
+
+
+
+https://www.eggradients.com/?9ef8dafd_page=2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+****************************************** ****** 
+********************* NOTES ********************* 
+****************************************** ****** 
+
+/////////// CONCURRENCY 
+
+  "start:build": "tsc -w",
+  "start:run": "nodemon build/index.ts",
+  "start": "concurrently npm:start:*"
+
+
+
+/////////// GIT
+
+git filter-branch --force --index-filter 'git rm -r --cached --ignore-unmatch node_modules' --prune-empty --tag-name-filter cat -- --all
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MERN Stack Real Time Chat App With Express, React, MongoDB
+Create a Twitter Clone with Node.js, Socket.IO and MongoDB
+MERN Stack Bootcamp – Build a Complete Movie Review App
+MERN Stack – React Node from Scratch Building Social Network
+MERN Stack Web Development with Ultimate Authentication (Forgot / Reset Password/ Email Verification)
+Facebook
+Ecommerce
+Discord Clone - Learn MERN Stack with WebRTC and SocketIO

@@ -1,0 +1,183 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.linkedEditing": true,
+  "editor.formatOnSave": true,
+  "diffEditor.wordWrap": "on",
+  "editor.fontFamily": "Fira Code iScript, Fira Code, Operator Mono",
+  "editor.fontLigatures": true,
+  "emmet.triggerExpansionOnTab": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "keyword",
+          "storage.modifier",
+          "storage.type.class.js",
+          "storage.type.js"
+        ],
+        "settings": {
+          "fontStyle": "italic bold"
+        }
+      },
+      {
+        "scope": ["keyword.control.conditional", "keyword.operator"],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
+  "semi": false,
+  "singleQuote": true,
+
+  "rainbowTags.colors": [
+    "#FBFBFB",
+    "#8cd9e3",
+    "#90ee90",
+    "#ff6347",
+    "#00bfff",
+    "#ffa07a",
+    "#f0e68c",
+    "#d87093",
+    "#14A44D",
+    "#dc143c",
+    "#FF8283",
+    "#0dcaf0",
+    "#5b82a1",
+    "#32cd32",
+    "#F5A25C",
+    "#20c997",
+    "#FBFBFB",
+    "#fd7e14"
+  ],
+  "rainbowTags.supportedLanguages": ["html", "xml", "react"],
+  "rainbowTags.hightlightType": "color",
+  "rainbowTags.allowEverywhere": true,
+  "rainbowTags.denylistTags": ["html", "head", "body"],
+  "colorful-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#dc143c",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#f4a460",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "^",
+      "color": "#d87093",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#90ee90",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "&",
+      "color": "#ff6347",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "~",
+      "color": "#00bfff",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "#",
+      "color": "#f0e68c",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "@",
+      "color": "#fffafa",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "$",
+      "color": "#ffa07a",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "%",
+      "color": "#32cd32",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  "liveServer.settings.donotShowInfoMsg": true,
+  "prettier.semi": false,
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "terminal.integrated.fontFamily": "monospace",
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "workbench.colorTheme": "Bearded Theme Arc Reversed",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "thunder-client.saveToWorkspace": true,
+  "window.zoomLevel": 1,
+  "liveServer.settings.donotVerifyTags": true,
+  "headwind.runOnSave": false
+}

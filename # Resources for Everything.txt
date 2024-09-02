@@ -1,0 +1,58 @@
+https://2019.wattenberger.com/blog/css-cascade
+
+\\\\\\\\\\\\\\ MAPS \\\\\\\\\\\\\\\\
+`https://www.openstreetmap.org/#map=16/${lat}/${lng}`
+
+\\\\\\\\\\\\\\ COLORS \\\\\\\\\\\\\\\
+- https://coolors.co
+
+
+\\\\\\\\\\\\\\ FONTS \\\\\\\\\\\\\\\
+- https://www.cssfontstack.com/
+- https://www.fontpair.co/
+- https://www.pagecloud.com/blog/best-google-fonts-pairings
+- https://fonts.google.com/
+
+
+\\\\\\\\\\\\\\ IMAGES \\\\\\\\\\\\\\\
+- https://pexels.com
+- https://pixabay.com
+- https://gratisography.com
+- https://unsplash.com/
+- https://undraw.co/illustrations
+- https://storyset.com/people
+
+\\\\\\\\\\\\\\ ICONS \\\\\\\\\\\\\\\
+- https://heroicons.dev
+- react-icons
+
+
+
+
+\\\\\\\\\\\\\\ JAVASCRIPT \\\\\\\\\\\\\\\
+
+
+
+
+\\\\\\\\\\\\\\ REACT \\\\\\\\\\\\\\\
+- npm i json-server
+	> "server":"json-server --watch ./src/questions.json --port 8000"
+- https://github.com/typicode/json-server/tree/v0
+
+
+
+
+- https://github.com/typicode/mistcss
+
+
+\\\\\\\\\\\\\\ NODEJS \\\\\\\\\\\\\\\
+migrage-mongo
+
+
+\\\\\\\\\\\\\\ NEXTJS \\\\\\\\\\\\\\\
+
+
+\\\\\\\\\\\\\\  \\\\\\\\\\\\\\\
+
+
+\\\\\\\\\\\\\\  \\\\\\\\\\\\\\\

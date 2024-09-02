@@ -1,0 +1,2 @@
+const jsonData = pm.response.json()
+pm.globals.set('token', jsonData.token)

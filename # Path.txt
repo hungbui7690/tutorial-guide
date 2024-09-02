@@ -1,0 +1,68 @@
+Smilga HTML, CSS >>> Javascript >>> NodeJS >>> React >>> Just Epxress >> Socket IO >>> Jonas NodeJS >>> Jonas JS 
+MongoDB (Max + Bogdan) 
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////
+
+Modern HTML & CSS From The Beginning (Including Sass)
+
+
+- Halalee: 
+	- HTML CSS
+	- Animation
+	- Javascript
+	- Python
+- Smilga:
+	- HTML
+	- JS
+	- React 
+	- NodeJS
+	- Material UI 
+	- Styled Component
+	- Gatsby 
+	- Serverless
+- Ninja
+	- Javascript 
+	- React 
+	- Vue 
+- Colt Steele / Stephen
+	- Algo
+	- React 
+	- Python
+	- Git 
+- Bogdan
+	- Docker 
+	- Git
+- Traversy
+	- Tailwind
+	
+- Robert Bunch
+	- React js. From the beginning. w/ Redux and React Router
+	- Just Express
+	- Socket
+	
+===========================
+- Postman
+- Swagger
+
+- Authorization
+- Authentication
+- AWS
+- Figma
+- Next.JS
+- Docker 
+
+
+- Go 
+- Socket
+- WebRTC

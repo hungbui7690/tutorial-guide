@@ -1,0 +1,17 @@
+Project
+- Server
+  -- package.json
+- Client
+  -- package.json
+
+
+
+Server > package.json
+	"scripts": {
+			"server": "nodemon server --ignore client",
+			"client": "npm start --prefix client",
+			"start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client\""
+		  },
+		  
+Client > package.json 
+	  "proxy": "http://localhost:5000/"

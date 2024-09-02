@@ -1,0 +1,38 @@
+Run terminal as admin
+	Install-Module PowerShellGet -Force
+Log out and start terminal as admin
+	Update-Module PowerShellGet -Force
+	Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+	Set-PSReadLineOption -PredictionSource History		
+	
+	
+	
+	
+	
+	
+*** notepad $PROFILE
+
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\agnosterplus.omp.json" | Invoke-Expression
+
+#Imports PSReadLine
+Import-Module PSReadLine
+
+#Tab - Gives a menu of suggestions
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+
+#UpArrow will show the most recent command
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+
+#DownArrow will show the least recent command
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+#During auto completion, pressing arrow key up or down will move the cursor to the end of the completion
+Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+
+#Shows tooltip during completion
+Set-PSReadLineOption -ShowToolTips
+
+#Gives completions/suggestions from historical commands
+Set-PSReadLineOption -PredictionSource History
+
+Set-PSReadLineOption -PredictionViewStyle ListView

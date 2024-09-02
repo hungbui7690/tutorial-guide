@@ -1,0 +1,9 @@
+1. Generate SSH Key
+- ssh-keygen -t rsa -b 4096 -C "hungbui7690@gmail.com"
+	> enter passphase
+- this will generate .pub file in C:\Users\7hanhHung\.ssh
+
+
+2. Edit that file with text editor 
+- copy text and paste to Github (Settings > SSH)
+
