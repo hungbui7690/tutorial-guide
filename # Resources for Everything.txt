@@ -3,6 +3,17 @@ https://2019.wattenberger.com/blog/css-cascade
 \\\\\\\\\\\\\\ MAPS \\\\\\\\\\\\\\\\
 `https://www.openstreetmap.org/#map=16/${lat}/${lng}`
 
+
+
+
+\\\\\\\\\\\\\\ INSPIRATION \\\\\\\\\\\\\\\
+- https://github.com/emmabostian/developer-portfolios?tab=readme-ov-file
+- https://ashleighsimonelli.co.uk/
+
+
+
+
+
 \\\\\\\\\\\\\\ COLORS \\\\\\\\\\\\\\\
 - https://coolors.co
 
@@ -25,7 +36,7 @@ https://2019.wattenberger.com/blog/css-cascade
 \\\\\\\\\\\\\\ ICONS \\\\\\\\\\\\\\\
 - https://heroicons.dev
 - react-icons
-
+- https://www.svgrepo.com/svg/
 
 
 
