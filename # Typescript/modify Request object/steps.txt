@@ -1,2 +1,0 @@
-1. create types.d.ts in root
-2. tsconfig.json ->   "files": ["types.d.ts"]

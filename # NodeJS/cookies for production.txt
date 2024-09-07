@@ -1,0 +1,241 @@
+- https://aaryansj.hashnode.dev/efficiently-transmitting-cookies-from-backend-to-frontend-in-a-mern-stack-during-production-deployment
+- https://www.youtube.com/watch?v=nviGhgtFbRo
+
+- NOTE: render does not allow to use cookie except we use the same host for frontend and backend
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+PROBLEM: 
+- cookie works well in local development, but not in production sometimes 
+- To solve: 
+
+BACKEND
+- PROD: sameSite = none + secure: true -> https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+	+ Strict not allows the cookie to be sent on a cross-site request or iframe. 
+	+ Lax allows GET only. 
+	+ None allows all the requests, but secure is required.
+
+
+# Solution 1
+res .cookie("accessToken", access_token, { 
+	httpOnly: true, 
+	secure: true, 
+	path: "/", 
+	expires: new Date(new Date().getTime() + 31557600000), 
+	same_site: "none",
+	domain: ".abc.xyz" 
+})
+
+
+# Solution 2
+res.cookie('refreshToken', refreshToken, {
+    httpOnly: true,
+    expires: new Date(Date.now() + oneDay * 30),
+    secure: process.env.NODE_ENV === 'production',
+    signed: true,
+    domain:
+      process.env.NODE_ENV === 'production'
+        ? 'my-website-api-bunjs.onrender.com'
+        : 'localhost',
+    sameSite: process.env.NODE_ENV === 'production' && 'none',
+  })
+
+
+
+FRONT END
+
+export const axiosInstance = axios.create({
+  // baseURL: 'http://localhost:5000/api/v1',
+  baseURL: 'https://my-website-api-bunjs.onrender.com/api/v1',
+  withCredentials: true,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})
+
+
+
+
+
+\\\\\\\\\\\\\\\\\\\ RENDER \\\\\\\\\\\\\\\\\\\
+
+NOTE 
+- After speaking with the Render.com support, they informed me that onrender.com (the domain for their subdomains) is on the public suffixes list, which means cross site cookies won't work. The solution was to add a custom domain for both Web Services (which obviously has to be the same e.g. app.my-custom-domain.com and api.my-custom-domain.com). I did this, and now everything is working as intended!
+- It means that to use cookies on render -> we have to use subdomain (frontend: hungbui.com, backend: api.hungbui.com)
+	+ for frontend, render just allows us to use static app 
+- So if we want to use render, we cannot use cookie
+
+
+
+
+
+
+///////////////////////// ANOTHER SOLUTION FOR COOKIE (NOT RENDER) //////////////////////////
+
+https://medium.com/@alysachan830/cookie-and-session-ii-how-session-works-in-express-session-7e08d102deb8
+https://www.npmjs.com/package/express-session
+- just can create 1 cookie
+
+
+const express = require("express");
+const session = require("express-session");
+const cors = require("cors");
+const app = express();
+app.use(express.json());
+app.use(
+  cors({
+    origin: "YOUR-FRONT-END-URL",
+    credentials: true,
+  })
+);
+const PORT = process.env.PORT || 3002;
+app.set("trust proxy", 1);
+
+app.use(
+  session({
+    resave: false,
+    saveUninitialized: false,
+    secret: "sessionss",
+    cookie: {
+      maxAge: 1000 * 60 * 60,
+      sameSite: "none",
+      // httpOnly: false,
+      secure: true,
+    },
+  })
+);
+
+
+
+// CREATE COOKIE
+app.post("/new", async (req, res) => {
+  try {
+    console.log(req.body.name);
+    req.session.name = req.body.name;
+    res.send({ message: "saved" }).status(201);
+  } catch (error) {
+    console.log(error);
+    res.status(500);
+    res.send(error);
+  }
+});
+
+
+// GET COOKIE
+app.get("/name", async (req, res) => {
+  try {
+    console.log(req.session.name);
+    res.send({ message: req.session.name });
+  } catch (error) {
+    console.log(error);
+    res.status(500);
+    res.send(error);
+  }
+});
+app.listen(PORT, () => console.log(`SERVER IS RUNNING ON ${PORT}`));
+
+
+
+
+
+
+REACT 
+import { useRef, useState } from "react";
+import "./App.css";
+import axios from "axios";
+function App() {
+  const input = useRef();
+  const [name, setName] = useState();
+  const clickHandler = () => {
+    const obj = { name: input.current.value };
+    const { data } = axios.post("YOUR-BACK-END-URL/new", obj, {
+      withCredentials: true,
+    });
+  };
+  const getNameHandler = async () => {
+    try {
+      const { data } = await axios.get(
+        "YOUR-BACK-END-URL/name",
+        { withCredentials: true }
+      );
+      setName(data.message);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return (
+    <div className="App">
+      <div className="form">
+        <p>{name}</p>
+        <label htmlFor="input">UserName</label>
+        <input ref={input} className="id" />
+        <button onClick={clickHandler}>Store Cookie</button>
+        <button onClick={getNameHandler}>Retrive Cookie</button>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\\\\\\\\\\\\\ Cross site approach \\\\\\\\\\\\\
+To allow receiving & sending cookies by a CORS request successfully, do the following.
+
+## Back-end (server) HTTP header settings:
+
+Set the HTTP header Access-Control-Allow-Credentials value to true.
+
+Make sure the HTTP headers Access-Control-Allow-Origin and Access-Control-Allow-Headers are set. Don't use a wildcard *. When you set the allowed origin make sure to use the entire origin including the scheme, i.e. http is not same as https in CORS.
+
+For more info on setting CORS in express js read the docs here.
+
+## Cookie settings: Cookie settings per Chrome and Firefox update in 2021:
+
+- SameSite=None
+- Secure
+When doing SameSite=None, setting Secure is a requirement. See docs on SameSite and on requirement of Secure. Also note that Chrome devtools now have improved filtering and highlighting of problems with cookies in the Network tab and Application tab.
+
+## Front-end (client): Set the XMLHttpRequest.withCredentials flag to true, this can be achieved in different ways depending on the request-response library used:
+
+ES6 fetch() This is the preferred method for HTTP. Use credentials: 'include'.
+
+jQuery 1.5.1 Mentioned for legacy purposes. Use xhrFields: { withCredentials: true }.
+
+axios As an example of a popular NPM library. Use withCredentials: true.
+
+
+
+\\\\\\\\\\\\\ Proxy approach \\\\\\\\\\\\\
+Avoid having to do cross site (CORS) stuff altogether. You can achieve this with a proxy. Simply send all traffic to the same top level domain name and route using DNS (subdomain) and/or load balancing. With Nginx this is relatively little effort.
+
+This approach is a perfect marriage with JAMStack. JAMStack dictates API and Webapp code to be completely decoupled by design. More and more users block 3rd party cookies. If API and Webapp can easily be served on the same host, the 3rd party problem (cross site / CORS) dissolves. Read about JAMStack here or here.
+
+
+\\\\\\\\\\\\\ Sidenote \\\\\\\\\\\\\
+It turned out that Chrome won't set the cookie if the domain contains a port. Setting it for localhost (without port) is not a problem. 
+
+
+
