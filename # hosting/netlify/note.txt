@@ -1,0 +1,7 @@
+redirect when using domain
+- create _redirects
+- place in public/
+
+for env variable: 
+- at build command when setup in netlify 
+	+ env && npm run build

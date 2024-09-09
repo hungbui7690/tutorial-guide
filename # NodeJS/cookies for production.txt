@@ -1,7 +1,15 @@
 - https://aaryansj.hashnode.dev/efficiently-transmitting-cookies-from-backend-to-frontend-in-a-mern-stack-during-production-deployment
 - https://www.youtube.com/watch?v=nviGhgtFbRo
+https://medium.com/@sadnub/simple-and-secure-api-authentication-for-spas-e46bcea592ad
 
 - NOTE: render does not allow to use cookie except we use the same host for frontend and backend
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+	- for security reason, token should only be stored in "Http-Only cookies"
+
 
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -15,6 +23,17 @@ BACKEND
 	+ Lax allows GET only. 
 	+ None allows all the requests, but secure is required.
 
+
+const accessToken = jwt.sign({ userID }, process.env.JWT_SECRET || 'secret', {
+expiresIn: process.env.JWT_LIFETIME,
+})
+
+const oneDay = 1000 * 60 * 60 * 24
+let refreshToken = ''
+refreshToken = crypto.randomBytes(40).toString('hex')
+const userAgent = req.headers['user-agent']
+const ip = req.ip
+const newRefreshToken = { refreshToken, ip, userAgent, user: userID }
 
 # Solution 1
 res .cookie("accessToken", access_token, { 
