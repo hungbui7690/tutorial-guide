@@ -1,0 +1,28 @@
+App
+- client
+- server
+
+ 
+ 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+App
+  "scripts": {
+    "dev": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "build": " npm install --prefix server && npm install --prefix client --production=false && npm run build --prefix client"
+  }
+  
+ 
+Client
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/",
+  }
+ 
+ 
+Server
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  }

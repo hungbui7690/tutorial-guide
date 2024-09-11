@@ -1,21 +1,58 @@
 - https://aaryansj.hashnode.dev/efficiently-transmitting-cookies-from-backend-to-frontend-in-a-mern-stack-during-production-deployment
 - https://www.youtube.com/watch?v=nviGhgtFbRo
-https://medium.com/@sadnub/simple-and-secure-api-authentication-for-spas-e46bcea592ad
+- https://medium.com/@sadnub/simple-and-secure-api-authentication-for-spas-e46bcea592ad
 
-- NOTE: render does not allow to use cookie except we use the same host for frontend and backend
+- NOTE: render does not allow to use cookie EXCEPT we use the same host for frontend and backend -> check chat app
+- for security reason, token should only be stored in "Http-Only cookies"
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+app 
+  "scripts": {
+    "dev": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "build": " npm install --prefix server && npm install --prefix client --production=false && npm run build --prefix client"
+  }
+-> client
+	  "scripts": {
+		"dev": "vite",
+		"build": "vite build --base=/",
+	  }
+-> server
+	  "scripts": {
+		"dev": "nodemon index.js",
+		"start": "node index.js"
+	  }
 
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+BACKEND 
+const generateTokenAndSetCookie = (userId, res) => {
+  const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
+    expiresIn: '15d',
+  })
 
-	- for security reason, token should only be stored in "Http-Only cookies"
+  const oneDay = 1000 * 60 * 60 * 24
+  res.cookie('token', token, {
+    httpOnly: true,
+    expires: new Date(Date.now() + oneDay),
+    secure: process.env.NODE_ENV === 'production', // # use only in PROD
+    signed: true,
+  })
+}
+
+FRONT END
+export const axiosInstance = axios.create({
+  baseURL: 'http://localhost:5000/api/v1',
+})
+
+axiosInstance.defaults.withCredentials = true
 
 
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-PROBLEM: 
-- cookie works well in local development, but not in production sometimes 
-- To solve: 
 
 BACKEND
 - PROD: sameSite = none + secure: true -> https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie

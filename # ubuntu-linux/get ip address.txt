@@ -1,0 +1,11 @@
+# curl ifconfig.me
+-> get public ip address
+
+# ifconfig
+-> ip from inet
+
+# hostname -I
+
+
+
+

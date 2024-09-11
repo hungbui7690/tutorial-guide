@@ -1,0 +1,15 @@
+1. ssh-keygen 
+2. putty key generator 
+
+
+
+get the public ip in linux 
+- curl ifconfig.me
+
+
+
+
+
+hostname: <username>@<hostname or IP> 
+- mac or linux: <username>@<hostname or IP> 
+- putty: hungbui7690@hungbui7690

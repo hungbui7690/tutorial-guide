@@ -1,0 +1,18 @@
+
+
+ssh <username>@<ip>
+- ip is from <ifconfig> -> inet 
+- remember to change the Network Setting to Bridge Adapter
+- Ex: ssh hungbui7690@192.xxx.x.x
+	-> yes 
+	-> enter password 
+- after login, ssh will be created in server
+- next time, we just need to enter password to login
+
+
+
+
+
+
+
+

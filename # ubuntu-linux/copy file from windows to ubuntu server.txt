@@ -1,0 +1,5 @@
+Copy file from Windows to Ubuntu server
+
+$ scp Filepathinwindows username@ubuntuserverip:linuxserverpath
+-> scp D:/TxtFile.txt root@ipaddress:/home/usr/
+

@@ -11,17 +11,23 @@ https://www.youtube.com/watch?v=nQdyiK7-VlQ&t=920s
 	sudo apt update
 	sudo apt upgrade
 
+
+
 ########## Install Node.js ##########
 - install NodeJS on server
 	curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 	sudo apt-get install -y nodejs
 	
+
+
 ########## rsync ##########
 - copy our project files from local to server
 
 	rsync -avz --exclude 'node_modules' --exclude '.git' --exclude '.env' \
 -e "ssh -i ~/.ssh/your-key.pem" \
 . ubuntu@ip-address:~/app
+
+
 
 ########## Install Database ##########
 - postgres
@@ -38,6 +44,8 @@ https://www.youtube.com/watch?v=nQdyiK7-VlQ&t=920s
 	sudo systemctl enable mysql
 
 	sudo mysql -u root
+
+
 	
 ########## Create DB User ##########
 - need to run these command using DB Client
@@ -51,6 +59,8 @@ https://www.youtube.com/watch?v=nQdyiK7-VlQ&t=920s
 	GRANT ALL PRIVILEGES ON my_app.* TO 'my_app_user'@'localhost';
 	
 //////////////////////////////////////
+
+
 
 ########## systemd ##########
 Step 1: Create the Environment File

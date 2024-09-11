@@ -1,0 +1,33 @@
+Virtual Box 
+- after install -> Power off -> Setting -> Network -> Bridge Adapter
+
+
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Install and configure SSH on your Ubuntu server
+
+$ sudo apt update
+$ sudo apt install openssh-server
+
+
+Enable port 22 ssh in firewall
+$ sudo ufw allow 22
+
+
+Check status whether SSH is running
+sudo systemctl status ssh
+
+
+You can start or stop SSH using the following commands
+$ sudo systemctl start ssh
+$ sudo service ssh stop
+
+
+
+
+$ sudo apt install net-tools
+$ ifconfig
+$ ip a
+
+
