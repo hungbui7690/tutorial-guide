@@ -4,4 +4,4 @@ redirect when using domain
 
 for env variable: 
 - at build command when setup in netlify 
-	+ env && npm run build
+	+ env && npm run buil
