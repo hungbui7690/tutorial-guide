@@ -36,14 +36,19 @@ services:
   mongodb:
     image: mongo:latest
     container_name: mongodb_server
+    restart: always
     env_file: ./.env
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=$MONGODB_USER
-      - MONGO_INITDB_ROOT_PASSWORD=$MONGODB_PASSWORD
+      - DEBUG=${DEBUG} # method 1
+      - MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USER} # method 2
+      - MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASSWORD}
+      - MONGO_URI: ${MONGODB_URI} # method 3
     ports:
       - '27017:27017'
+    expose:
+      - '27017'
     volumes:
-      - app_db:/data/db:rw
+      - app_db:/data/db:rw # mongodb data will be stored in app_db volume below
 
 # define volumes -> mongodb data will be stored in app_db volume
 volumes:
