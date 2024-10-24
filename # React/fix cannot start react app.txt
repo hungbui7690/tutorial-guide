@@ -1,7 +1,7 @@
-n your package.json: change this line
+in your package.json: change this line
 
 	"start": "react-scripts start"
 
 to
 
-	"start": "react-scripts --openssl-legacy-provider start"
+	"start": "react-scripts --openssl-legacy-provider start",

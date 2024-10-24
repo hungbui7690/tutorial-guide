@@ -1,0 +1,20 @@
+
+https://v2.chakra-ui.com/docs/styled-system/responsive-styles
+const breakpoints = {
+  base: '0em', // 0px
+  sm: '30em', // ~480px. em is a relative unit and is dependant on the font size.
+  md: '48em', // ~768px
+  lg: '62em', // ~992px
+  xl: '80em', // ~1280px
+  '2xl': '96em', // ~1536px
+}
+
+
+480		mobile devices
+768 	ipad, tablets
+992 ? 	
+1024	small screen, laptops
+1200	desktop
+1201+	extra large screens, tv...
+
+

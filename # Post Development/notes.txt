@@ -1,0 +1,7 @@
+  PurgeCSS
+  - https://purgecss.com/CLI.html
+  - check css/index.css file -> we have a lot of unused styles
+    -> PurgeCSS will remove them
+
+    # npm i -D purgecss
+    # purgecss --css ./css/index.css --content index.html --output ./index.css

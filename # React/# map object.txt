@@ -1,0 +1,16 @@
+  const iconMap: { [key: string]: IconType } = {
+    pc: FaWindows,
+    playstation: FaPlaystation,
+    xbox: FaXbox,
+    nintendo: SiNintendo,
+    mac: FaApple,
+    linux: FaLinux,
+    ios: MdPhoneIphone,
+    android: FaAndroid,
+    web: BsGlobe,
+  }
+  
+  
+  
+  iconMap[pc] = FaWindows
+  

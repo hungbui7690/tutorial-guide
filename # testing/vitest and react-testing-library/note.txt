@@ -1,0 +1,39 @@
+
+npm i -D vitest
+npm i -D @testing-library/react 
+npm i -D jsdom
+npm i -D @testing-library/jest-dom
+
+
+package.json
+	"test": "vitest",
+	"test:ui": "vitest --ui"
+
+
+create root/tests/setup.ts
+	import '@testing-library/jest-dom/vitest'
+
+
+
+vite.config.ts
+	import { defineConfig } from 'vitest/config'
+
+	export default defineConfig({
+	  test: {
+		environment: 'jsdom',
+		globals: true,
+		setupFiles: ['./tests/setup.ts'],
+	  },
+	})
+	
+	
+tsconfig.json
+    "types": ["vitest/globals"],
+
+
+
+
+
+
+
+

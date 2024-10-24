@@ -1,0 +1,8 @@
+const imgRef = useRef(null)
+
+<CiImageOn
+  className='w-6 h-6 cursor-pointer fill-primary'
+  onClick={() => imgRef.current.click()}	/>
+<input type='file' accept='image/*' hidden ref={imgRef} />
+
+

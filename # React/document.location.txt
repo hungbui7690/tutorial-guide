@@ -1,0 +1,4 @@
+Get URL: 
+
+  const location = new URL(document.location)
+  const searchParams = location.searchParams

@@ -2,14 +2,20 @@ https://2019.wattenberger.com/blog/css-cascade
 
 \\\\\\\\\\\\\\ MAPS \\\\\\\\\\\\\\\\
 `https://www.openstreetmap.org/#map=16/${lat}/${lng}`
+LeafletJS
 
+
+PythonAutoGUI
+
+
+React: DOMPurify
 
 
 
 \\\\\\\\\\\\\\ INSPIRATION \\\\\\\\\\\\\\\
 - https://github.com/emmabostian/developer-portfolios?tab=readme-ov-file
 - https://ashleighsimonelli.co.uk/
-
+- https://github.com/guswnsxodlf
 
 
 
@@ -37,10 +43,38 @@ https://2019.wattenberger.com/blog/css-cascade
 - https://heroicons.dev
 - react-icons
 - https://www.svgrepo.com/svg/
+- https://lucide.dev/
+- https://fonts.google.com/icons
 
 
 
-\\\\\\\\\\\\\\ JAVASCRIPT \\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\ FAKE DATA \\\\\\\\\\\\\\\
+
+https://fakestoreapi.com/
+https://dummyjson.com/
+https://fakeapi.platzi.com/
+https://beeceptor.com/crud-api/
+https://freetestapi.com/
+https://mockapi.io/
+https://reqres.in/
+https://github.com/typicode/json-server
+
+
+
+
+
+
+
+
+\\\\\\\\\\\\\\ API \\\\\\\\\\\\\\\
+
+Games: https://rawg.io/
+
+
+
+
+
+
 
 
 
@@ -53,7 +87,20 @@ https://2019.wattenberger.com/blog/css-cascade
 
 
 
+
+
 - https://github.com/typicode/mistcss
+
+- Slider: https://swiperjs.com/
+- Ediotor: react-quill
+- Datetime format: moment
+- Date Range Picker: react-date-range
+- Drag and Drop: react-beautiful-dnd
+- Authentication: Auth0 - YGHAP9GKBD59QB46LJ44ASU3
+- Server: json-server
+  - "server": "json-server --watch src/db/db.json --port 5000"
+- Server: https://github.com/typicode/lowdb
+
 
 
 \\\\\\\\\\\\\\ NODEJS \\\\\\\\\\\\\\\

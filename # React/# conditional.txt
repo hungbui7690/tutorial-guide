@@ -1,0 +1,5 @@
+const color = score > 75 ? 'green' : score > '60' ? 'yellow' : ''
+
+score > 75 -> green
+score > 60 -> yellow
+else -> ''
